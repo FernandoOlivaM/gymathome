@@ -1,9 +1,16 @@
+<title>Gym@Home</title>
+<link rel="icon" type="image/x-icon" href="../src/images/icon.png">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="login.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="./script.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--Import materialize.css-->
+<!-- <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"  media="screen,projection"/> -->
 
-<!-- <script src="./script.js"></script> -->
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <center>
     <div id="app">
     
@@ -19,39 +26,93 @@
                         <div class="speaker"></div>
                         <div class="screen position-relative">
                             <div class="overlay">
-                                <form>
-                                   <div class="con">
-                                   <header class="head-form">
-                                        <img src="../src/images/icon.png" alt="Gym@Home" style="width: 50px;">
-                                        <h2>Gym@Home</h2>
-                                        <p>Inicia sesión</p>
-                                   </header>
-                                   <br>
-                                   <div class="field-set">
-                                        <span class="input-item">
-                                            <i class="fa fa-user-circle"></i>
-                                        </span>
-                                        <input class="form-input" id="txt-input" type="text" placeholder="@Usuario" required>
-                                        <br>
-                                        <span class="input-item">
-                                            <i class="fa fa-key"></i>
-                                        </span>
-                                        <input class="form-input" type="password" placeholder="Contraseña" id="pwd"  name="password" required>                                     
-                                        <span>
-                                            <i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"></i>
-                                        </span>
-                                        <br>
-                                      <button class="log-in"> Iniciar Sesión </button>
-                                   </div>
-                                  
-                                   <div class="other">
-                                      <button class="btn submits frgt-pass">Olvidé Mi Contraseña</button>
-                                      <button class="btn submits sign-up">Registrarme &nbsp;
-                                        <i class="fa fa-user-plus" aria-hidden="true"></i>
-                                      </button>
-                                   </div>                                     
-                                  </div>                                  
-                                </form>
+                                <div id="loginform">
+                                       <div class="con">
+                                       <header class="head-form">
+                                            <img src="../src/images/icon.png" alt="Gym@Home" style="width: 50px;">
+                                            <h2>Gym@Home</h2>
+                                            <p>Inicia sesión</p>
+                                       </header>
+                                       <br>
+                                       <div class="field-set">
+                                            <span class="input-item">
+                                                <i class="fa fa-user-circle"></i>
+                                            </span>
+                                            <input class="form-input" id="txt-input" type="text" placeholder="@Usuario" required>
+                                            <br>
+                                            <span class="input-item">
+                                                <i class="fa fa-key"></i>
+                                            </span>
+                                            <input class="form-input" type="password" placeholder="Contraseña" id="pwd"  name="password" required>                                     
+                                            <span>
+                                                <i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"></i>
+                                            </span>
+                                            <br>
+                                          <button class="log-in" onclick="login()"> Iniciar Sesión </button>
+                                       </div>
+                                      
+                                       <div class="other">
+                                          <button class="btn submits frgt-pass">Olvidé Mi Contraseña</button>
+                                          <button class="btn submits sign-up">Registrarme &nbsp;
+                                            <i class="fa fa-user-plus" aria-hidden="true"></i>
+                                          </button>
+                                       </div>                                     
+                                      </div>                                  
+                                </div>
+                                <div id="tabs" style="display: none;">
+                                    <div id="homeTab">
+                                        homeTab
+                                    </div>
+                                    <div id="rutineTab" style="display: none;">
+                                        rutineTab
+                                    </div>
+                                    <div id="newTab" style="display: none;">
+                                        newTab
+                                    </div>
+                                    <div id="profileTab" style="display: none;">
+                                        profileTab
+                                    </div>
+                                    <div id="settingTab" style="display: none;">
+                                        settingTab
+                                    </div>
+                                    <header class="header">
+                                        <div class="container">
+                                          <nav class="bottom-nav">
+                                            <div class="bottom-nav-item active">
+                                              <div class="bottom-nav-link" onclick="changePage('homeTab')">
+                                                <i class="material-icons">home</i>
+                                                <span>Inicio</span>
+                                              </div>
+                                            </div>
+                                            <div class="bottom-nav-item">
+                                              <div class="bottom-nav-link" onclick="changePage('rutineTab')">
+                                                <i class="material-icons">favorite</i>
+                                                <span> Rutinas</span>
+                                              </div>
+                                            </div>
+                                            <div class="bottom-nav-item" >
+                                              <div class="bottom-nav-link" onclick="changePage('newTab')">
+                                                <i class="material-icons">add</i>
+                                                <span>Nueva Rutina</span>
+                                              </div>
+                                            </div>
+                                            <div class="bottom-nav-item" >
+                                              <div class="bottom-nav-link" onclick="changePage('profileTab')">
+                                                <i class="material-icons">account_circle</i>
+                                                <span>Perfil</span>
+                                              </div>
+                                            </div>
+                                      
+                                            <div class="bottom-nav-item" >
+                                              <div class="bottom-nav-link" onclick="changePage('settingTab')">
+                                                <i class="material-icons">settings</i>
+                                                <span>Ajustes</span>
+                                              </div>
+                                            </div>
+                                          </nav>
+                                        </div>
+                                      </header>
+                                </div>
                             </div>
                         </div>
                         <div class="home"></div>
