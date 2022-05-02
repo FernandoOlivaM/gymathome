@@ -1,7 +1,10 @@
 function login(){
     document.getElementById("loginform").style.display = "none";
     document.getElementById("tabs").style.display = "block";
-
+}
+function logout(){
+    document.getElementById("loginform").style.display = "block";
+    document.getElementById("tabs").style.display = "none";
 }
 function changePage(origin){
     let tabs = ["homeTab","rutineTab","newTab","profileTab","settingTab"];

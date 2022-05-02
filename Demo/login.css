@@ -386,3 +386,94 @@ h1 {
 #scroll-color::-webkit-scrollbar-thumb {
     background-color: #4950F6;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
+
+
+
+.card {
+    width: 380px;
+    border: none;
+    border-radius: 15px;
+    padding: 8px;
+    background-color: #fff;
+    position: relative;
+    height: auto
+}
+
+.upper {
+    height: 100px
+}
+
+.upper img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px
+}
+
+.user {
+    position: relative
+}
+
+.profile img {
+    height: 80px;
+    width: 80px;
+    margin-top: 2px
+}
+
+.profile {
+    position: absolute;
+    top: -50px;
+    left: 38%;
+    height: 90px;
+    width: 90px;
+    border: 3px solid #fff;
+    border-radius: 50%
+}
+
+.follow {
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 35px
+}
+
+.stats span {
+    font-size: 29px
+}
+
+@import url(https://fonts.googleapis.com/css?family=Quicksand:700);
+@import url(https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css);
+
+.nav {
+  width:250px; margin:auto; padding:0; overflow:hidden;
+  background:#fff;
+  border-radius: 5px;	
+  box-shadow:0 1px 10px rgba(0,0,0,.1);	
+}
+.nav a {
+  display:block; padding-left:20px;
+  border-left:5px solid;
+  line-height:3.5em; color:#686868; text-decoration:none; text-transform:uppercase;
+  transition:all .2s ease-in-out;			
+}
+.nav a.profile-nav { border-color:#008747; }
+.nav a.messages { border-color:#fecf54; }
+.nav a.settings { border-color:#cf2130; }
+.nav a.logout { border-color:#dde2d5; }
+
+.nav a:hover,nav a:focus,
+#profile:target ~ nav a.profile-nav,
+#messages:target ~ nav a.messages,
+#settings:target ~ nav a.settings {
+  background:#efefef;
+}
+.nav a:hover span,nav a:focus span { color:#ea4f35; }
+.nav span { margin-right:15px; }
+.nav em {
+	float:right; margin:1.5em 15px 0; padding:3px 5px;
+  border-radius:50%;
+  background:#ea4f35;
+  font-size:.7em; line-height:1em; font-style:normal; color:#fff;
+}
+.hidden { display:none; visibility:hidden; }

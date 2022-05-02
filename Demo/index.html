@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <!--Import materialize.css-->
 <!-- <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"  media="screen,projection"/> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <!--Let browser know website is optimized for mobile-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -60,7 +61,7 @@
                                 </div>
                                 <div id="tabs" style="display: none;">
                                     <div id="homeTab">
-                                        
+                                        <img src="./news.jpg" style="width: 300px;">
                                     </div>
                                     <div id="rutineTab" style="display: none;">
                                         <header class="head-form">
@@ -202,10 +203,58 @@
                                         newTab
                                     </div>
                                     <div id="profileTab" style="display: none;">
-                                        profileTab
+                                        <div class="container d-flex justify-content-center align-items-center">
+                                            <div class="card">
+                                                <div class="upper"> <img src="https://i.imgur.com/Qtrsrk5.jpg" class="img-fluid"> </div>
+                                                <div class="user text-center">
+                                                    <div class="profile"> <img src="https://avatars.githubusercontent.com/u/47476809?s=400&u=bf4a9ece8fee3d7660c45e9148e3f9b79958d004&v=4" class="rounded-circle" width="80"> </div>
+                                                </div>
+                                                <div class="mt-5 text-center">
+                                                    <h4 class="mb-0">Fernando Oliva</h4> <span class="text-muted d-block mb-2">Ciudad de Guatemala</span>
+                                                    <div class="d-flex justify-content-between align-items-center mt-4 px-4">
+                                                        <div class="stats">
+                                                            <h6 class="mb-0">Puntos</h6> <span>8,797</span>
+                                                        </div>
+                                                        <div class="stats">
+                                                            <h6 class="mb-0">Rutinas</h6> <span>142</span>
+                                                        </div>
+                                                        <div class="stats">
+                                                            <h6 class="mb-0">Rango</h6> <span>8</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between align-items-center mt-4 px-4">
+                                                        <div class="stats">
+                                                            <h6 class="mb-0">* <i style="color: orange;"> 10 días en racha 🔥</i></h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between align-items-center mt-4 px-4">
+                                                        <div class="stats">
+                                                            <h6 class="mb-0">* <i style="color: green;"> Especialista en lagartijas </i></h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between align-items-center mt-4 px-4">
+                                                        <div class="stats">
+                                                            <h6 class="mb-0">* Miembro desde: 22-04-2022</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div id="settingTab" style="display: none;">
-                                        settingTab
+                                        <span id="profile" class="hidden"></span>
+                                        <span id="messages" class="hidden"></span>
+                                        <span id="settings" class="hidden"></span>
+                                        <span id="logout" class="hidden"></span>
+                                        <h2>Ajustes</h2>
+
+                                        <nav class="nav">
+                                        <a class="profile-nav" href="#profile" title="Edit profile"><span class="icon-user"></span>Editar Perfil</a>
+                                        <a class="messages" href="#messages" title="Messages"><span class="icon-envelope-alt"></span>Notificaciones <em>5</em></a>
+                                        <a class="settings" href="#settings" title="App settings"><span class="icon-cog"></span>Ajustes Generales</a>
+                                        <a class="logout" href="#logout" onclick="logout()" title="Logout"><span class="icon-signout"></span>Cerrar Sesión</a>
+                                        </nav>
+
                                     </div>
                                     <header class="header">
                                         <div class="container">
